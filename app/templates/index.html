@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Gemini Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-section">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+                <button type="button" id="register-btn">Registrarse</button>
+            </form>
+        </div>
+
+        <div id="chat-section" style="display: none;">
+            <div id="chat-messages"></div>
+            <div id="typing-indicator" style="display: none;">
+                <span>Gemini está escribiendo...</span>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="message-input" placeholder="Escribe tu mensaje..." required>
+                <button type="submit">Enviar</button>
+            </form>
+            <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
